@@ -323,6 +323,7 @@ func (s *Server) newIDToken(clientID string, claims storage.Claims, scopes []str
 		Nonce:    nonce,
 		Expiry:   expiry.Unix(),
 		IssuedAt: issuedAt.Unix(),
+		Groups:   []string{"goo"},
 	}
 
 	if accessToken != "" {
